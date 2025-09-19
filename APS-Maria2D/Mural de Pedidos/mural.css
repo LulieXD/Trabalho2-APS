@@ -90,7 +90,7 @@ body p {
 
 #formulario_mural input[type="text"],
 #formulario_mural textarea {
-    width: 100%;
+    width: 160%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;

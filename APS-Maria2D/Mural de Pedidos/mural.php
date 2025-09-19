@@ -78,7 +78,7 @@ COMPARAÇÃO COM O CÓDIGO DE "ANTIGOxCLOUDINARY"
 <head>
 <meta charset="utf-8"/>
 <title>Mural de Produtos</title>
-<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="mural.css"/>
 
 <!--
 COMPARAÇÃO: No código ANTIGO/pedidos havia jQuery + jQuery Validate
@@ -109,6 +109,14 @@ $(document).ready(function() {
             <h1>Mural de Produtos</h1>
         </div>
 
+        <div class="background-blur"></div>
+     <div id="main">
+    
+    <div id="header">
+
+        </div>
+
+
         <!-- ==========================
         FORMULÁRIO
         ========================== -->
@@ -124,7 +132,7 @@ $(document).ready(function() {
                 <input type="number" step="0.01" name="preco" required/>
 
                 <label>Imagem:</label>
-                <input type="file" name="imagem" accept="image/*" required/>
+                <input type="file" class="btn" name="imagem" accept="image/*" required/>
 
                 <input type="submit" value="Cadastrar Produto" name="cadastra" class="btn"/>
             </form>
@@ -156,11 +164,14 @@ $(document).ready(function() {
         ?>
         </div>
 
-        <div id="footer">
-            <p>Mural - Cloudinary & PHP</p>
-            <!-- No código anterior, o footer estava vazio -->
+        <footer class="footer">
+    <div class="footer-content">
+        ★ Algo a nos reportar? Contate-nos!<br>
+        <p><i class="fa-solid fa-envelope"></i> Email: contato@muralmagico.com</p>
+        </p>
+        <p>&copy; 2025 Mural Mágico ★ Todos os direitos reservados.</p>
         </div>
-    </div>
+</footer>
 </div>
 </body>
 </html>      
