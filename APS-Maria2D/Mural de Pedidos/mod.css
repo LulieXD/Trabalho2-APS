@@ -87,45 +87,21 @@ body {
     font-size: 14px;
 }
 
-
-.recados {
-    list-style: none;
+.produto {
     background-color: #ffb2d2;
-    padding: 15px 20px;
+    padding: 10px;
     border-radius: 10px;
+    margin-top: 40px;
     margin-bottom: 15px;
     border-left: 5px solid #f848a0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;    
 }
 
-.recados:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.recados li {
-    margin-bottom: 6px;
-}
-
-.recados a {
-    color: #f848a0;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 5px;
-    transition: color 0.2s;
-}
-
-.recados a:hover {
-    color: #e60073;
-    text-decoration: underline;
-}
-
-#footer {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 13px;
-    color: #777;
+.produto img {
+    width: 400px;
+    height: 400px;
+    
 }
 
 #formulario_mural .btn {
@@ -143,16 +119,6 @@ body {
 
 #formulario_mural .btn:hover {
     background-color: #e60073;
-}
-
-#footer {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 13px;
-}
-
-.footer-content {
-    color: #444;
 }
 
 /*Teve várias tentativas de mudar o texto dentro dos recados para a cor cinza, mas não consegui :sob:*/

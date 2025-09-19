@@ -94,13 +94,20 @@ COMPARAÇÃO:
 <meta charset="utf-8"/>
 <title>Moderar Produtos</title>
 <link rel="stylesheet" href="mod.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+<a href="index.php" id="btn-voltar">
+    <i class="fa-solid fa-arrow-left"></i>
+</a>
+
+<div class="background-blur"></div>
 <div id="main">
-    <div id="geral">
-        <div id="header">
-            <h1>Moderar Produtos</h1>
-        </div>
+<div id="geral">
+<div id="header">
+    <h1>Moderar produtos</h1>
+</div>
 
         <div class="produtos-container">
             <?php while($res = mysqli_fetch_assoc($produtos)): ?>

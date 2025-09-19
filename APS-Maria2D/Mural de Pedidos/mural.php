@@ -79,6 +79,11 @@ COMPARAÇÃO COM O CÓDIGO DE "ANTIGOxCLOUDINARY"
 <meta charset="utf-8"/>
 <title>Mural de Produtos</title>
 <link rel="stylesheet" href="mural.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<a href="index.php" id="btn-voltar">
+    <i class="fa-solid fa-arrow-left"></i>
+</a>
 
 <!--
 COMPARAÇÃO: No código ANTIGO/pedidos havia jQuery + jQuery Validate
@@ -103,11 +108,12 @@ $(document).ready(function() {
 -->
 </head>
 <body>
+<div class="background-blur"></div>
 <div id="main">
-    <div id="geral">
-        <div id="header">
-            <h1>Mural de Produtos</h1>
-        </div>
+<div id="geral">
+<div id="header">
+    <h1>Mural de pedidos</h1>
+</div>
 
         <div class="background-blur"></div>
      <div id="main">
@@ -162,15 +168,6 @@ $(document).ready(function() {
         */
 
         ?>
-        </div>
-
-        <footer class="footer">
-    <div class="footer-content">
-        ★ Algo a nos reportar? Contate-nos!<br>
-        <p><i class="fa-solid fa-envelope"></i> Email: contato@muralmagico.com</p>
-        </p>
-        <p>&copy; 2025 Mural Mágico ★ Todos os direitos reservados.</p>
-        </div>
 </footer>
 </div>
 </body>
