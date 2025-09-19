@@ -62,18 +62,20 @@ body p {
 
 
 #main {
-    display: flexbox;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;  /* Coloca tudo em coluna (form + lista abaixo) */
+    align-items: center;     /* Centraliza horizontalmente */
     padding: 20px;
 }
 
+/* Ajuste o container geral */
 #geral {
     width: 600px;
     background-color: rgba(255, 190, 217, 0.702);
     padding: 25px 30px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    
+    margin-bottom: 40px;   /* Espaço entre o form e os produtos */
 }
 
 #header h1 {
@@ -121,6 +123,14 @@ body p {
     background-color: #e60073;
 }
 
+/* Container de produtos centralizado também */
+.produtos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* ocupa largura total, mas os filhos ficam centralizados */
+}
+
 .produto {
     background-color: #ffb2d2;
     padding: 10px;
@@ -133,21 +143,28 @@ body p {
 }
 
 .produto img {
-    width: 400px;
+    width: 100%;
     height: 400px;
-    
+    object-fit: contain; 
 }
+
 
 .produto:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.produto li {
-    margin-bottom: 6px;
+.produto p {
+    color: #444;
 }
 
-.produto p {
+#footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+.footer-content {
     color: #444;
 }
 

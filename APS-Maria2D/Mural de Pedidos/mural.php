@@ -112,7 +112,7 @@ $(document).ready(function() {
 <div id="main">
 <div id="geral">
 <div id="header">
-    <h1>Mural de pedidos</h1>
+    <h1>Mural de Produtos</h1>
 </div>
 
         <div class="background-blur"></div>
@@ -168,6 +168,13 @@ $(document).ready(function() {
         */
 
         ?>
+<footer class="footer">
+    <div class="footer-content">
+        ★ Algo a nos reportar? Contate-nos!<br>
+        <p><i class="fa-solid fa-envelope"></i> Email: contato@softlove.com</p>
+        </p>
+        <p>&copy; 2025 Soft Love ★ Todos os direitos reservados.</p>
+        </div>
 </footer>
 </div>
 </body>

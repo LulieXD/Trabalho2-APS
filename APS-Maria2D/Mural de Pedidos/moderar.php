@@ -110,33 +110,33 @@ COMPARAÇÃO:
 </div>
 
         <div class="produtos-container">
-            <?php while($res = mysqli_fetch_assoc($produtos)): ?>
-                <div class="produto">
-                    <p><strong>ID:</strong> <?= $res['id'] ?></p>
-                    <p><strong>Nome:</strong> <?= htmlspecialchars($res['nome']) ?></p>
-                    <p><strong>Preço:</strong> R$ <?= number_format($res['preco'], 2, ',', '.') ?></p>
-                    <p><strong>Descrição:</strong> <?= nl2br(htmlspecialchars($res['descricao'])) ?></p>
-                    <p><img src="<?= htmlspecialchars($res['imagem_url']) ?>" alt="<?= htmlspecialchars($res['nome']) ?>"></p>
+    <?php while($res = mysqli_fetch_assoc($produtos)): ?>
 
-                    <!-- Link para excluir -->
-                    <a href="moderar.php?excluir=<?= $res['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+        <div class="produto">
+            <p><strong>ID:</strong> <?= $res['id'] ?></p>
+            <p><strong>Nome:</strong> <?= htmlspecialchars($res['nome']) ?></p>
+            <p><strong>Preço:</strong> R$ <?= number_format($res['preco'], 2, ',', '.') ?></p>
+            <p><strong>Descrição:</strong> <?= nl2br(htmlspecialchars($res['descricao'])) ?></p>
+            <p><img src="<?= htmlspecialchars($res['imagem_url']) ?>" alt="<?= htmlspecialchars($res['nome']) ?>"></p>
 
-                    <!-- Formulário de edição inline -->
-                    <?php if($editar_id == $res['id']): ?>
-                        <form method="post" action="moderar.php">
-                            <input type="hidden" name="id" value="<?= $res['id'] ?>">
-                            <input type="text" name="nome" value="<?= htmlspecialchars($res['nome']) ?>" required><br>
-                            <textarea name="descricao" required><?= htmlspecialchars($res['descricao']) ?></textarea><br>
-                            <input type="number" step="0.01" name="preco" value="<?= $res['preco'] ?>" required><br>
-                            <input type="submit" name="editar" value="Salvar">
-                            <a href="moderar.php">Cancelar</a>
-                        </form>
-                    <?php else: ?>
-                        <a href="moderar.php?editar=<?= $res['id'] ?>">Editar</a>
-                    <?php endif; ?>
-                </div>
-            <?php endwhile; ?>
-        </div>
+            <a href="moderar.php?excluir=<?= $res['id'] ?>" class="btn" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+
+            <?php if($editar_id == $res['id']): ?>
+                <div class="editar-produto">
+                    <form method="post" action="moderar.php">
+                        <input type="hidden" name="id" value="<?= $res['id'] ?>">
+                        <input type="text" name="nome" value="<?= htmlspecialchars($res['nome']) ?>" required><br>
+                        <textarea name="descricao" required><?= htmlspecialchars($res['descricao']) ?></textarea><br>
+                        <input type="number" step="0.01" name="preco" value="<?= $res['preco'] ?>" required><br>
+                        <input type="submit" name="editar" value="Salvar" class="btn">
+                        <a href="moderar.php" class="btn">Cancelar</a>
+                    </form>
+                </div> <?php else: ?>
+                <a href="moderar.php?editar=<?= $res['id'] ?>" class="btn">Editar</a>
+            <?php endif; ?>
+
+        </div> <?php endwhile; ?>
+</div>
     </div>
 </div>
 </body>
