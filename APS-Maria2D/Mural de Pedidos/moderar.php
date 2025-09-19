@@ -121,6 +121,8 @@ COMPARAÇÃO:
 
             <a href="moderar.php?excluir=<?= $res['id'] ?>" class="btn" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
 
+            <!-- Houve uma pequena modificação nesta parte do código com auxilio de I.A, pelo fato de não estar conseguindo fazer
+             os produtos caberem dentro do quadro branco do body-->
             <?php if($editar_id == $res['id']): ?>
                 <div class="editar-produto">
                     <form method="post" action="moderar.php">
@@ -137,7 +139,7 @@ COMPARAÇÃO:
 
         </div> <?php endwhile; ?>
 </div>
-    </div>
+</div>
 </div>
 </body>
 </html>
